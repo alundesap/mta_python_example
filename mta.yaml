@@ -2,3 +2,8 @@ ID: mta_python_example
 _schema-version: '2.0'
 description: Multi-Target Application with Python Module
 version: 0.0.1
+
+modules:
+ - name: web
+   type: html5
+   path: web
