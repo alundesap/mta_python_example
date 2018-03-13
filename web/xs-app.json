@@ -9,6 +9,12 @@
 	  "authenticationType": "none"
     },
     {
+      "source": "(spython\/)(.*)",
+      "destination": "python_be", 
+	  "csrfProtection": false,
+	  "authenticationType": "xsuaa"
+    },
+    {
       "localDir": "resources",
       "source": "^/(.*)", 
 	  "authenticationType": "none"
