@@ -29,8 +29,22 @@ function exec_or_dump() {
 cmd='cp mta.yaml mtad.yaml'
 exec_or_dump "$cmd"
 
-#cmd='sed -i -e "s/html5/'$gitname'/g" '$lcorg'_mta_nodejs_cf.job'
-#exec_or_dump "$cmd"
+cmd='sed -i -e "s/type: hdb/type: com.sap.xs.hdi/g" mtad.yaml'
+exec_or_dump "$cmd"
+
+cmd='sed -i -e "s/type: java/type: java.tomcat/g" mtad.yaml'
+exec_or_dump "$cmd"
+
+cmd='sed -i -e "s/type: html5/type: javascript.nodejs/g" mtad.yaml'
+exec_or_dump "$cmd"
+
+cmd='sed -i -e "s/type: nodejs/type: javascript.nodejs/g" mtad.yaml'
+exec_or_dump "$cmd"
+
+#https://help.sap.com/viewer/DRAFT/4505d0bdaf4948449b7f7379d24d0f0d/2.0.03/en-US/4050fee4c469498ebc31b10f2ae15ff2.html
+#custom
+#native
+#python
 
 echo ""
 echo "Done."
