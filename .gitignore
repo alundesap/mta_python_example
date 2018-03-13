@@ -1,2 +1,6 @@
 mta-assembly/
 mtad.yaml
+.mta/
+target/
+web/node_modules/
+web/package-lock.json
