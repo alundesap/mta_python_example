@@ -6,4 +6,32 @@ version: 0.0.1
 modules:
  - name: web
    type: html5
-   path: web
+   path: web/
+   parameters:
+      memory: 96MB
+      disk: 256M
+   requires: 
+    - name: mta-python-uaa
+    - name: python_api
+      group: destinations
+      properties:
+        name: python_be
+        url: ~{url}
+        forwardAuthToken: true
+
+ - name: python
+   type: custom
+   path: python/
+   parameters:
+      memory: 64MB
+      disk: 256M
+   requires:
+    - name: mta-python-uaa
+   provides:
+    - name: python_api
+      properties:
+        url: ${default-url}
+
+resources:
+ - name: mta-python-uaa
+   type: com.sap.xs.uaa  
