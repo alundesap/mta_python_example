@@ -12,7 +12,7 @@ modules:
       disk: 256M
       host: py-ex-web
    requires: 
-    - name: mta-python-ex-uaa
+    - name: py-ex-uaa
     - name: python_api
       group: destinations
       properties:
@@ -28,12 +28,12 @@ modules:
       disk: 256M
       host: py-ex-python
    requires:
-    - name: mta-python-ex-uaa
+    - name: py-ex-uaa
    provides:
     - name: python_api
       properties:
         url: ${default-url}
 
 resources:
- - name: mta-python-ex-uaa
+ - name: py-ex-uaa
    type: com.sap.xs.uaa  
