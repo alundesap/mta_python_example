@@ -10,6 +10,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
+      host: py-ex-web
    requires: 
     - name: mta-python-uaa
     - name: python_api
@@ -25,6 +26,7 @@ modules:
    parameters:
       memory: 64MB
       disk: 256M
+      host: py-ex-python
    requires:
     - name: mta-python-uaa
    provides:
