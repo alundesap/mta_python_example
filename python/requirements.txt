@@ -1,1 +1,2 @@
 Flask==0.12.2
+git+https://alunde@bitbucket.org/byol/sap-py-jwt.git
