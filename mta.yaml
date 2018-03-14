@@ -10,9 +10,11 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
-      host: py-ex-web
+      host: py-shared-web
+   properties:
+      TENANT_HOST_PATTERN: '^py-(.*)-web.(.*)'
    requires: 
-    - name: py-ex-uaa
+    - name: python-ex-uaa
     - name: python_api
       group: destinations
       properties:
@@ -26,14 +28,14 @@ modules:
    parameters:
       memory: 64MB
       disk: 256M
-      host: py-ex-python
+      host: py-shared-python
    requires:
-    - name: py-ex-uaa
+    - name: python-ex-uaa
    provides:
     - name: python_api
       properties:
         url: ${default-url}
 
 resources:
- - name: py-ex-uaa
+ - name: python-ex-uaa
    type: com.sap.xs.uaa  
