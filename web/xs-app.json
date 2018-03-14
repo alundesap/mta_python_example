@@ -3,16 +3,16 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "(python\/)(.*)",
-      "destination": "python_be", 
-	  "csrfProtection": false,
-	  "authenticationType": "none"
-    },
-    {
       "source": "(spython\/)(.*)",
       "destination": "python_be", 
 	  "csrfProtection": false,
 	  "authenticationType": "xsuaa"
+    },
+    {
+      "source": "(python\/)(.*)",
+      "destination": "python_be", 
+	  "csrfProtection": false,
+	  "authenticationType": "none"
     },
     {
       "localDir": "resources",
